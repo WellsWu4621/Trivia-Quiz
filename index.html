@@ -16,44 +16,47 @@
 
 <body>
 
-  <body>
-    <div class="container  yellow darken-1">
-      <!-- Main Title -->
-      <div class="row title">
-        <div class="col m3 s12">
-          <img src="assets/image/js.png" alt="JS" class="responsive-img">
-        </div>
-        <div class="col m9 s12">
-          <h1>JavaScript Quiz</h1>
-        </div>
+  <div class="container  yellow darken-1">
+    <!-- Main Title -->
+    <div class="row title">
+      <div class="col m9 s12">
+        <h1>JavaScript Quiz</h1>
+        <p class="blurb">A simple JavaScript quiz to review JS fundamentals</p>
       </div>
-      <!-- time/score row -->
-      <div class="row yellow lighten-2">
-        <p id="time"></p>
-        <p id="score"></p>
+      <div class="col m3 s12">
+        <img src="assets/image/js.png" alt="JS" class="responsive-img">
       </div>
-      <!-- Score form and submit button -->
-      <form id="scoreForm" class="hidden">
-        <div class="row">
-          <div class="input-field col s12 m6">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Enter Initials Here</label>
-          </div>
-          <div class="col s12 m6" id="submitDiv">
-            <button class="btn waves-effect waves-light submitDiv" id="submitButton" type="submit" name="action">Submit
-              Score
-              <i class="material-icons right">send</i>
-            </button>
-          </div>
-        </div>
-      </form>
-      <a class="waves-effect waves-light btn-large startBtn">Start Quiz</a>
     </div>
+    <!-- time/score row -->
+    <div class="row">
+      <p id="time" class="TandS"></p>
+      <p id="score" class="TandS"></p>
+    </div>
+    <!-- Score form and submit button -->
+    <form id="scoreForm" class="hidden">
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Enter Initials Here</label>
+        </div>
+        <div class="col s12 m6" id="submitDiv">
+          <button class="btn waves-effect waves-light submitDiv" id="submitButton" type="submit" name="action">Submit
+            Score
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- start button -->
+    <a class="waves-effect waves-light btn-large" id="startBtn">Start Quiz</a>
+  </div>
+  <div class="container">
     <div id="question" class="row">
 
     </div>
-  </body>
+  </div>
+
 
 
   <!-- Compiled and minified JavaScript -->

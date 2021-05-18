@@ -1,6 +1,9 @@
 .title{
   margin-top: 20px;
 }
+.blurb{
+  font-size: medium;
+}
 
 .hidden {
   display: none;
@@ -8,8 +11,16 @@
 #submitButton{
   margin-top: 20px;
 }
-.startBtn {
+.TandS {
+  font-size: medium;
+  text-align: center;
+}
+#startBtn {
   width: 90%;
   margin-left: 5%;
   margin-bottom: 20px;
+}
+.collection-item {
+  width: 100%;
+  font-size: medium;
 }
