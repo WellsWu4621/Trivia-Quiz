@@ -1,0 +1,15 @@
+.title{
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+#submitButton{
+  margin-top: 20px;
+}
+.startBtn {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
