@@ -24,3 +24,9 @@
   width: 100%;
   font-size: medium;
 }
+.tableLabel{
+  font-size: large;
+}
+.tableValue{
+  font-size: medium;
+}
