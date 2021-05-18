@@ -8,14 +8,14 @@
 .hidden {
   display: none;
 }
-#submitButton{
+#submitButton #playAgain{
   margin-top: 20px;
 }
 .TandS {
   font-size: medium;
   text-align: center;
 }
-#startBtn {
+.startBtn {
   width: 90%;
   margin-left: 5%;
   margin-bottom: 20px;
@@ -23,6 +23,12 @@
 .collection-item {
   width: 100%;
   font-size: medium;
+  text-align: left;
+  text-transform: none;
+  color: black;
+}
+.btn:hover{
+  background-color: rgb(238, 238, 238);
 }
 .tableLabel{
   font-size: large;

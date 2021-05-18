@@ -45,19 +45,24 @@ const loadQuestion = () => {
   qElem.innerHTML = `
     <h3>Question ${current + 1}: ${questions[current].question}</h3>
     <ul class="collection">
-      <li class="collection-item waves-effect waves-green" data-choice="${questions[current].choices[0]}">
+      <li class="collection-item waves-effect waves-red btn" data-choice="${questions[current].choices[0]}" id="option0">
               A) ${questions[current].choices[0]}</li>
-      <li class="collection-item waves-effect waves-green" data-choice="${questions[current].choices[1]}">
+      <li class="collection-item waves-effect waves-red btn" data-choice="${questions[current].choices[1]}" id="option1">
               B) ${questions[current].choices[1]}</li>
-      <li class="collection-item waves-effect waves-green" data-choice="${questions[current].choices[2]}">
+      <li class="collection-item waves-effect waves-red btn" data-choice="${questions[current].choices[2]}" id="option2">
               C) ${questions[current].choices[2]}</li>
-      <li class="collection-item waves-effect waves-green" data-choice="${questions[current].choices[3]}">
+      <li class="collection-item waves-effect waves-red btn" data-choice="${questions[current].choices[3]}" id="option3">
               D) ${questions[current].choices[3]}</li>
-      <li class="collection-item waves-effect waves-green" data-choice="${questions[current].choices[4]}">
+      <li class="collection-item waves-effect waves-red btn" data-choice="${questions[current].choices[4]}" id="option4">
               E) ${questions[current].choices[4]}</li>
     </ul>
   `
   document.getElementById('question').append(qElem)
+  for (let c = 0; c < questions[current].choices.length; c++) {
+    if (questions[current].answer === questions[current].choices[c]) {
+      document.getElementById(`option${c}`).className = 'collection-item waves-effect waves-green btn'
+    }
+  }
 }
 
 // Start Game Event
@@ -81,13 +86,15 @@ document.addEventListener('click', event => {
     }
     console.log(event.target.dataset.choice)
     current++
-    if (current >= questions.length) {
-      endGame()
-      clearInterval(timer)
-    }
-    else {
-      loadQuestion()
-    }
+    setTimeout(() => {
+      if (current >= questions.length) {
+        endGame()
+        clearInterval(timer)
+      }
+      else {
+        loadQuestion()
+      }
+    }, 200);
   }
 })
 
