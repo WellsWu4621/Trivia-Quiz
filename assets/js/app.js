@@ -100,6 +100,7 @@ document.addEventListener('click', event => {
 
 document.getElementById('submitButton').addEventListener('click', event => {
   event.preventDefault()
+  window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, "_blank")
   let userInitials = document.getElementById('icon_prefix').value
   let userScores = JSON.parse(localStorage.getItem('userScores')) || []
   userScores.push({ userInitials, score })
